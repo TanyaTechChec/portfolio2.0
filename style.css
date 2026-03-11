@@ -39,41 +39,23 @@ header, section, footer { background-color: rgba(0,0,0,0.5); border-radius:10px;
   position: relative;
   max-width: 600px;
   margin: 20px auto;
+}
+
+.slides-container {
   overflow: hidden;
   border-radius: 10px;
+  height: 350px; /* фиксированная высота слайдера */
 }
 
 .slides {
   display: flex;
   transition: transform 0.5s ease;
+  height: 100%;
 }
 
 .slides img {
   flex-shrink: 0;
-  width: 100%;           /* занимает всю ширину слайда */
-  height: auto;          /* сохраняет пропорции картинки */
-  max-height: 350px;     /* ограничиваем максимальную высоту */
-  object-fit: contain;   /* показывает всю картинку без обрезки */
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;         /* растягиваем только по высоте контейнера */
+  object-fit: contain;  /* сохраняет пропорции, не обрезает */
 }
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  border: none;
-  color: white;
-  font-size: 28px;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-.slider-btn:hover {
-  background: #ffd700;
-  color: black;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
