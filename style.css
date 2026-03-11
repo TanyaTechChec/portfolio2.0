@@ -34,18 +34,46 @@ header, section, footer { background-color: rgba(0,0,0,0.5); border-radius:10px;
 .project-btn:hover, .contact-btn:hover { background:#ffd700; color:#000; transform:translateY(-2px); box-shadow:0 6px 15px rgba(0,0,0,0.3);}
 .project-btn:active, .contact-btn:active { transform:translateY(0); }
 
-/* Slider */
-.slider { position:relative; max-width:600px; margin:20px auto; overflow:hidden; }
-.slides { display:flex; transition:transform 0.5s ease; }
-.slides img { width:100%; border-radius:10px; flex-shrink:0; }
-.slider-btn { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); border:none; color:white; font-size:28px; padding:10px 15px; cursor:pointer; border-radius:6px; }
-.slider-btn:hover { background:#ffd700; color:black; }
-.prev { left:10px; } .next { right:10px; }
+/* Слайдер */
+.slider {
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
 
 .slides img {
-  width: 100%;          /* занимает ширину слайдера */
-  height: 350px;        /* фиксированная высота */
-  object-fit: cover;    /* центрирует и обрезает края, чтобы было красиво */
-  border-radius: 10px;
+  width: 100%;
+  height: 350px;          /* фиксированная высота */
   flex-shrink: 0;
+  object-fit: cover;      /* центр + обрезка */
+  object-position: center;
+  border-radius: 10px;
 }
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 28px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.slider-btn:hover {
+  background: #ffd700;
+  color: black;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
