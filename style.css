@@ -12,6 +12,7 @@
 
 #bubbles:hover { background: #3D689C; }
 
+/* Контент поверх canvas */
 .content {
   position: relative;
   z-index: 1;
@@ -45,22 +46,53 @@ header.hero {
 }
 
 /* Слайдер */
-.slider { position: relative; max-width: 600px; margin: 20px auto; }
+.slider {
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
 .slides-container {
+  position: relative;
   overflow: hidden;
   border-radius: 10px;
   background: rgba(0,0,0,0.2);
+  text-align: center;
 }
-.slides { display: flex; transition: transform 0.5s ease; }
-.slides img { flex-shrink: 0; max-width: 100%; height: auto; display: block; }
+
+.slides img {
+  display: none; /* все картинки скрыты */
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.slides img.active {
+  display: block; /* показываем только текущую */
+}
 
 .slider-btn {
-  position: absolute; top: 50%; transform: translateY(-50%);
-  background: rgba(0,0,0,0.5); border: none; color: white;
-  font-size: 28px; padding: 10px 15px; cursor: pointer; border-radius: 6px; z-index:2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 28px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  z-index: 2;
 }
-.slider-btn:hover { background: #ffd700; color: black; }
-.prev { left:10px; } .next { right:10px; }
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.slider-btn:hover {
+  background: #ffd700;
+  color: black;
+}
 
 /* Остальные секции */
 section, footer {
@@ -74,15 +106,39 @@ section, footer {
 section h2 { color: #ffd700; margin-bottom: 10px; }
 
 .skills-list span {
-  display: inline-block; background-color: rgba(255,255,255,0.2);
-  padding: 5px 10px; margin:3px; border-radius:5px; font-size:0.9rem;
+  display: inline-block; 
+  background-color: rgba(255,255,255,0.2);
+  padding: 5px 10px; 
+  margin:3px; 
+  border-radius:5px; 
+  font-size:0.9rem;
 }
 
 /* Lightbox */
 #lightbox {
-  display:none; position:fixed; top:0; left:0; width:100%; height:100%;
-  background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;
+  display:none; 
+  position:fixed; 
+  top:0; left:0; 
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.8); 
+  justify-content:center; 
+  align-items:center; 
+  z-index:1000;
   display:flex;
 }
-#lightbox img { max-width:90%; max-height:90%; border-radius:10px; }
-#lightbox .close { position:absolute; top:20px; right:30px; color:#fff; font-size:40px; font-weight:bold; cursor:pointer; }
+
+#lightbox img {
+  max-width:90%; 
+  max-height:90%; 
+  border-radius:10px;
+}
+
+#lightbox .close {
+  position:absolute; 
+  top:20px; 
+  right:30px; 
+  color:#fff; 
+  font-size:40px; 
+  font-weight:bold; 
+  cursor:pointer;
+}
