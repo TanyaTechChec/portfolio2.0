@@ -51,17 +51,24 @@ header.hero {
 
 .slides-container {
   width: 100%;
-  overflow: hidden;
   border-radius: 10px;
   background: rgba(0,0,0,0.2);
   text-align: center;
+  padding: 10px;
 }
 
 .slides img {
   display: none;
+  width: auto;
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.slides img:hover {
+  transform: scale(1.02);
 }
 
 .slides img.active {
