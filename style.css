@@ -60,3 +60,35 @@ header, section, footer {
 .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); border: none; color: white; font-size: 28px; padding: 10px 15px; cursor: pointer; border-radius: 6px; }
 .slider-btn:hover { background: #ffd700; color: black; }
 .prev { left: 10px; } .next { right: 10px; }
+
+/* Hero с фото справа */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero-text .subtitle {
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #eaeaea;
+}
+
+.hero-photo img {
+  width: 150px;       /* размер фото, можно подправить */
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffd700;
+}
