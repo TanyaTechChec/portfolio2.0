@@ -3,18 +3,15 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1; 
+  z-index: -1;
   width: 100%;
   height: 100%;
   background: #477ab9;
   transition: all 0.4s ease-in-out;
 }
 
-#bubbles:hover {
-  background: #3D689C;
-}
+#bubbles:hover { background: #3D689C; }
 
-/* Контент поверх canvas */
 .content {
   position: relative;
   z-index: 1;
@@ -36,15 +33,8 @@ header.hero {
   margin-bottom: 20px;
 }
 
-.hero-text h1 {
-  font-size: 2.3rem;
-  margin-bottom: 10px;
-}
-
-.hero-text .subtitle {
-  font-size: 1.05rem;
-  color: #eaeaea;
-}
+.hero-text h1 { font-size: 2.3rem; margin-bottom: 10px; }
+.hero-text .subtitle { font-size: 1.05rem; color: #eaeaea; }
 
 .hero-photo img {
   width: 120px;
@@ -55,54 +45,22 @@ header.hero {
 }
 
 /* Слайдер */
-.slider {
-  position: relative;
-  max-width: 600px;
-  margin: 20px auto;
-}
-
+.slider { position: relative; max-width: 600px; margin: 20px auto; }
 .slides-container {
   overflow: hidden;
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: rgba(0,0,0,0.2);
 }
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.slides img {
-  flex-shrink: 0;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+.slides { display: flex; transition: transform 0.5s ease; }
+.slides img { flex-shrink: 0; max-width: 100%; height: auto; display: block; }
 
 .slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  border: none;
-  color: white;
-  font-size: 28px;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 6px;
-  z-index: 2;
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(0,0,0,0.5); border: none; color: white;
+  font-size: 28px; padding: 10px 15px; cursor: pointer; border-radius: 6px; z-index:2;
 }
-
-.slider-btn:hover {
-  background: #ffd700;
-  color: black;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
+.slider-btn:hover { background: #ffd700; color: black; }
+.prev { left:10px; } .next { right:10px; }
 
 /* Остальные секции */
 section, footer {
@@ -113,69 +71,18 @@ section, footer {
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-section h2 {
-  color: #ffd700;
-  margin-bottom: 10px;
-}
+section h2 { color: #ffd700; margin-bottom: 10px; }
 
 .skills-list span {
-  display: inline-block;
-  background-color: rgba(255,255,255,0.2);
-  padding: 5px 10px;
-  margin: 3px;
-  border-radius: 5px;
-  font-size: 0.9rem;
-}
-/* Lightbox для увеличения картинок */
-.lightbox {
-  display: none; /* скрыт по умолчанию */
-  position: fixed;
-  z-index: 1000;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
+  display: inline-block; background-color: rgba(255,255,255,0.2);
+  padding: 5px 10px; margin:3px; border-radius:5px; font-size:0.9rem;
 }
 
-.lightbox-img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
+/* Lightbox */
+#lightbox {
+  display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+  background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;
+  display:flex;
 }
-
-.lightbox .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-// Lightbox для увеличения картинок
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.querySelector('.lightbox-img');
-const closeBtn = document.querySelector('.lightbox .close');
-
-// Добавляем клик на каждую картинку слайдера
-images.forEach(img => {
-  img.addEventListener('click', () => {
-    lightbox.style.display = 'flex';
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
-  });
-});
-
-// Закрытие по кнопке
-closeBtn.addEventListener('click', () => {
-  lightbox.style.display = 'none';
-});
-
-// Закрытие по клику на фоне
-lightbox.addEventListener('click', e => {
-  if (e.target === lightbox) {
-    lightbox.style.display = 'none';
-  }
-});
+#lightbox img { max-width:90%; max-height:90%; border-radius:10px; }
+#lightbox .close { position:absolute; top:20px; right:30px; color:#fff; font-size:40px; font-weight:bold; cursor:pointer; }
