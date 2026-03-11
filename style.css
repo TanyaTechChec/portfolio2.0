@@ -3,16 +3,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1; /* Позади контента */
+  z-index: -1;
   width: 100%;
   height: 100%;
   background: #477ab9;
   transition: all 0.4s ease-in-out;
 }
 
-#bubbles:hover {
-  background: #3D689C;
-}
+#bubbles:hover { background: #3D689C; }
 
 /* Контент поверх canvas */
 .content {
@@ -25,242 +23,40 @@
   color: #fff;
 }
 
-/* Стили секций */
+/* Секции */
 header, section, footer {
-  background-color: rgba(0,0,0,0.5); /* полупрозрачные карточки */
+  background-color: rgba(0,0,0,0.5);
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-section h2 {
-  color: #ffd700;
-  margin-bottom: 10px;
-}
-
-.skills-list span {
-  display: inline-block;
-  background-color: rgba(255,255,255,0.2);
-  padding: 5px 10px;
-  margin: 3px;
-  border-radius: 5px;
-  font-size: 0.9rem;
-}
-/* Кнопки проектов */
-.projects-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.project-btn {
-  display: inline-block;
-  padding: 12px 18px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/* Наведение */
-.project-btn:hover {
-  background: #ffd700;
-  color: #000;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Клик */
-.project-btn:active {
-  transform: translateY(0);
-}
-/* Кнопки контактов */
-.contact-buttons {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.contact-btn {
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/* Наведение */
-.contact-btn:hover {
-  background: #ffd700;
-  color: #000;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Клик */
-.contact-btn:active {
-  transform: translateY(0);
-}
-
 /* Hero */
-.hero {
-  text-align: center;
-  padding: 30px 20px;
-}
-
-.hero h1 {
-  font-size: 2.3rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  line-height: 1.3;
-}
-
-.hero .accent {
-  color: #ffd700;
-}
-
-.subtitle {
-  font-size: 1.05rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #eaeaea;
-}
+.hero { text-align: center; padding: 30px 20px; }
+.hero h1 { font-size: 2.3rem; font-weight: 700; margin-bottom: 12px; line-height: 1.3; }
+.subtitle { font-size: 1.05rem; letter-spacing: 1px; text-transform: uppercase; color: #eaeaea; }
 
 /* About */
-.about h2 {
-  font-size: 1.6rem;
-  margin-bottom: 16px;
-}
+.about h2 { font-size: 1.6rem; margin-bottom: 16px; }
+.about p { margin-bottom: 14px; line-height: 1.7; }
+.about .lead { font-size: 1.1rem; font-weight: 500; color: #ffffff; }
+.about .note { color: #ffd700; font-style: italic; }
+.about .highlight { margin-top: 18px; background: rgba(255, 215, 0, 0.15); border-left: 4px solid #ffd700; padding: 14px 16px; border-radius: 6px; font-style: italic; }
 
-.about p {
-  margin-bottom: 14px;
-  line-height: 1.7;
-}
+/* Skills */
+.skills-list span { display: inline-block; background-color: rgba(255,255,255,0.2); padding: 5px 10px; margin: 3px; border-radius: 5px; font-size: 0.9rem; }
 
-/* Вводный абзац */
-.about .lead {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #ffffff;
-}
+/* Buttons */
+.projects-buttons, .contact-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+.project-btn, .contact-btn { display: inline-block; padding: 12px 18px; border-radius: 8px; background: rgba(255, 255, 255, 0.15); color: #fff; text-decoration: none; font-weight: 500; border: 1px solid rgba(255, 255, 255, 0.3); transition: all 0.3s ease; }
+.project-btn:hover, .contact-btn:hover { background: #ffd700; color: #000; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); }
+.project-btn:active, .contact-btn:active { transform: translateY(0); }
 
-/* Небольшая ремарка */
-.about .note {
-  color: #ffd700;
-  font-style: italic;
-}
-
-/* Финальный акцент */
-.about .highlight {
-  margin-top: 18px;
-  background: rgba(255, 215, 0, 0.15);
-  border-left: 4px solid #ffd700;
-  padding: 14px 16px;
-  border-radius: 6px;
-  font-style: italic;
-}
-/* Блок тестовой документации */
-
-.qa-artifacts h2 {
-  color: #ffd700;
-  margin-bottom: 10px;
-}
-
-.artifacts-description {
-  margin-bottom: 20px;
-  opacity: 0.9;
-}
-
-/* Галерея */
-.artifacts-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-/* Карточка */
-.artifact {
-  background: rgba(255,255,255,0.1);
-  padding: 12px;
-  border-radius: 10px;
-  text-align: center;
-  transition: 0.3s;
-}
-
-/* Картинка */
-.artifact img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-/* Подпись */
-.artifact p {
-  font-size: 0.9rem;
-}
-
-/* hover эффект */
-.artifact:hover {
-  transform: translateY(-4px);
-  background: rgba(255,255,255,0.18);
-}
-/* Слайдер */
-
-.slider {
-  position: relative;
-  max-width: 600px;
-  margin: 20px auto;
-  overflow: hidden;
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.slides img {
-  width: 100%;
-  border-radius: 10px;
-  flex-shrink: 0;
-}
-
-/* кнопки */
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  border: none;
-  color: white;
-  font-size: 28px;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-.slider-btn:hover {
-  background: #ffd700;
-  color: black;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
+/* Slider */
+.slider { position: relative; max-width: 600px; margin: 20px auto; overflow: hidden; }
+.slides { display: flex; transition: transform 0.5s ease; }
+.slides img { width: 100%; border-radius: 10px; flex-shrink: 0; }
+.slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); border: none; color: white; font-size: 28px; padding: 10px 15px; cursor: pointer; border-radius: 6px; }
+.slider-btn:hover { background: #ffd700; color: black; }
+.prev { left: 10px; } .next { right: 10px; }
