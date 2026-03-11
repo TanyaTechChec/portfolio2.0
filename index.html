@@ -1,107 +1,118 @@
 <!DOCTYPE html>
 <html lang="ru">
-<header class="hero">
-  <div class="hero-text">
-    <h1>Привет! Я Татьяна 👋</h1>
-    <p class="subtitle">QA-специалист</p>
-  </div>
-  <div class="hero-photo">
-    <img src="images/Image.png" alt="Моя фотография">
-  </div>
-</header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио Татьяны</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
 <canvas id="bubbles"></canvas>
 
 <div class="content">
-<header class="hero">
-  <h1>Привет! Я Татьяна 👋</h1>
-  <p class="subtitle">QA-специалист</p>
-</header>
 
-<section class="about">
-  <h2>О себе 👩‍💻</h2>
-  <p class="lead">Выпускница Яндекс Практикума. Мой менеджерский бэкграунд — это суперсила в тестировании.</p>
-  <p>Я вижу продукт целиком, понимаю бизнес-контекст, умею расставлять приоритеты и довожу задачи до финального результата.</p>
-  <p>Люблю работать в команде и находить решения даже в сложных ситуациях <span class="note"> («упало, но не у меня» — не мой девиз)</span>.</p>
-  <p class="highlight">Моя миссия в QA — не просто находить ошибки, а делать продукты удобнее, надёжнее и дружелюбными к пользователям.</p>
-</section>
-
-<section class="goals">
-  <h2>Мои цели 🚀</h2>
-  <p>Участвовать в создании продуктов, которыми будут гордиться команда и пользователи.</p>
-  <p>Хочу работать над проектами с высокой инженерной культурой, где тестирование — ключевой элемент создания ценности.</p>
-</section>
-
-<section class="contact">
-  <h2>Контакты 📞</h2>
-  <div class="contact-buttons">
-    <a href="mailto:tastakhovafreel29@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-btn">📧 Email</a>
-    <a href="https://t.me/tasi_astax" target="_blank" rel="noopener noreferrer" class="contact-btn">💬 Telegram</a>
-  </div>
-</section>
-
-<section class="skills">
-  <h2>Технологии и инструменты ⚡</h2>
-  <div class="skills-list">
-    <span>Jira</span><span>YouTrack</span><span>Qase</span>
-    <span>Postman</span><span>Notion</span><span>Figma</span>
-    <span>Miro</span><span>draw.io</span><span>MySQL</span>
-    <span>DBeaver</span><span>PostgreSQL</span>
-    <span>Android Studio</span>
-    <span>Browser DevTools</span>
-    <span>Charles</span>
-    <span>HTML</span><span>CSS</span>
-    <span>React</span><span>Next.js</span>
-    <span>Django</span><span>Confluence</span>
-  </div>
-</section>
-
-<section class="projects">
-  <h2>Проекты 🌐</h2>
-  <div class="projects-buttons">
-    <a href="https://example.com" target="_blank" class="project-btn">Яндекс.Метро</a>
-    <a href="https://example.com" target="_blank" class="project-btn">Яндекс.Прилавок — тест-лид</a>
-    <a href="https://example.com" target="_blank" class="project-btn">Яндекс.Самокат</a>
-    <a href="https://example.com" target="_blank" class="project-btn">Газпром-Медиа</a>
-    <a href="https://example.com" target="_blank" class="project-btn">Only — iOS приложение</a>
-    <a href="https://example.com" target="_blank" class="project-btn">Автотест — поиск футера</a>
-    <a href="https://example.com" target="_blank" class="project-btn">onli.digital</a>
-    <a href="https://example.com" target="_blank" class="project-btn">Jobby.ai</a>
-  </div>
-</section>
-
-<section class="qa-artifacts">
-  <h2>Тестовая документация 🧪</h2>
-  <p class="artifacts-description">Примеры тест-кейсов, чек-листов и баг-репортов</p>
-
-  <div class="slider">
-    <button class="slider-btn prev">❮</button>
-    <div class="slides">
-      <!-- Заглушки для 13 проектов -->
-      <img src="https://via.placeholder.com/600x350?text=Проект+1" alt="Проект 1">
-      <img src="https://via.placeholder.com/600x350?text=Проект+2" alt="Проект 2">
-      <img src="https://via.placeholder.com/600x350?text=Проект+3" alt="Проект 3">
-      <img src="https://via.placeholder.com/600x350?text=Проект+4" alt="Проект 4">
-      <img src="https://via.placeholder.com/600x350?text=Проект+5" alt="Проект 5">
-      <img src="https://via.placeholder.com/600x350?text=Проект+6" alt="Проект 6">
-      <img src="https://via.placeholder.com/600x350?text=Проект+7" alt="Проект 7">
-      <img src="https://via.placeholder.com/600x350?text=Проект+8" alt="Проект 8">
-      <img src="https://via.placeholder.com/600x350?text=Проект+9" alt="Проект 9">
-      <img src="https://via.placeholder.com/600x350?text=Проект+10" alt="Проект 10">
-      <img src="https://via.placeholder.com/600x350?text=Проект+11" alt="Проект 11">
-      <img src="https://via.placeholder.com/600x350?text=Проект+12" alt="Проект 12">
-      <img src="https://via.placeholder.com/600x350?text=Проект+13" alt="Проект 13">
+  <!-- Hero с фото справа -->
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Привет! Я Татьяна 👋</h1>
+      <p class="subtitle">QA-специалист</p>
     </div>
-    <button class="slider-btn next">❯</button>
-  </div>
-</section>
+    <div class="hero-photo">
+      <img src="images/my_photo_placeholder.jpg" alt="Моя фотография">
+    </div>
+  </header>
 
-<footer>
-  © 2026 Татьяна · QA Portfolio
-</footer>
+  <!-- О себе -->
+  <section class="about">
+    <h2>О себе 👩‍💻</h2>
+    <p class="lead">Выпускница Яндекс Практикума. Мой менеджерский бэкграунд — это суперсила в тестировании.</p>
+    <p>Я вижу продукт целиком, понимаю бизнес-контекст, умею расставлять приоритеты и довожу задачи до финального результата.</p>
+    <p>Люблю работать в команде и находить решения даже в сложных ситуациях <span class="note"> («упало, но не у меня» — не мой девиз)</span>.</p>
+    <p class="highlight">Моя миссия в QA — не просто находить ошибки, а делать продукты удобнее, надёжнее и дружелюбными к пользователям.</p>
+  </section>
+
+  <!-- Цели -->
+  <section class="goals">
+    <h2>Мои цели 🚀</h2>
+    <p>Участвовать в создании продуктов, которыми будут гордиться команда и пользователи.</p>
+    <p>Хочу работать над проектами с высокой инженерной культурой, где тестирование — ключевой элемент создания ценности.</p>
+  </section>
+
+  <!-- Контакты -->
+  <section class="contact">
+    <h2>Контакты 📞</h2>
+    <div class="contact-buttons">
+      <a href="mailto:tastakhovafreel29@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-btn">📧 Email</a>
+      <a href="https://t.me/tasi_astax" target="_blank" rel="noopener noreferrer" class="contact-btn">💬 Telegram</a>
+    </div>
+  </section>
+
+  <!-- Технологии -->
+  <section class="skills">
+    <h2>Технологии и инструменты ⚡</h2>
+    <div class="skills-list">
+      <span>Jira</span><span>YouTrack</span><span>Qase</span>
+      <span>Postman</span><span>Notion</span><span>Figma</span>
+      <span>Miro</span><span>draw.io</span><span>MySQL</span>
+      <span>DBeaver</span><span>PostgreSQL</span>
+      <span>Android Studio</span>
+      <span>Browser DevTools</span>
+      <span>Charles</span>
+      <span>HTML</span><span>CSS</span>
+      <span>React</span><span>Next.js</span>
+      <span>Django</span><span>Confluence</span>
+    </div>
+  </section>
+
+  <!-- Проекты -->
+  <section class="projects">
+    <h2>Проекты 🌐</h2>
+    <div class="projects-buttons">
+      <a href="https://example.com" target="_blank" class="project-btn">Яндекс.Метро</a>
+      <a href="https://example.com" target="_blank" class="project-btn">Яндекс.Прилавок — тест-лид</a>
+      <a href="https://example.com" target="_blank" class="project-btn">Яндекс.Самокат</a>
+      <a href="https://example.com" target="_blank" class="project-btn">Газпром-Медиа</a>
+      <a href="https://example.com" target="_blank" class="project-btn">Only — iOS приложение</a>
+      <a href="https://example.com" target="_blank" class="project-btn">Автотест — поиск футера</a>
+      <a href="https://example.com" target="_blank" class="project-btn">onli.digital</a>
+      <a href="https://example.com" target="_blank" class="project-btn">Jobby.ai</a>
+    </div>
+  </section>
+
+  <!-- Слайдер с проектами -->
+  <section class="qa-artifacts">
+    <h2>Тестовая документация 🧪</h2>
+    <p class="artifacts-description">Примеры тест-кейсов, чек-листов и баг-репортов</p>
+
+    <div class="slider">
+      <button class="slider-btn prev">❮</button>
+      <div class="slides">
+        <!-- Заглушки 13 проектов -->
+        <img src="https://via.placeholder.com/600x350?text=Проект+1" alt="Проект 1">
+        <img src="https://via.placeholder.com/600x350?text=Проект+2" alt="Проект 2">
+        <img src="https://via.placeholder.com/600x350?text=Проект+3" alt="Проект 3">
+        <img src="https://via.placeholder.com/600x350?text=Проект+4" alt="Проект 4">
+        <img src="https://via.placeholder.com/600x350?text=Проект+5" alt="Проект 5">
+        <img src="https://via.placeholder.com/600x350?text=Проект+6" alt="Проект 6">
+        <img src="https://via.placeholder.com/600x350?text=Проект+7" alt="Проект 7">
+        <img src="https://via.placeholder.com/600x350?text=Проект+8" alt="Проект 8">
+        <img src="https://via.placeholder.com/600x350?text=Проект+9" alt="Проект 9">
+        <img src="https://via.placeholder.com/600x350?text=Проект+10" alt="Проект 10">
+        <img src="https://via.placeholder.com/600x350?text=Проект+11" alt="Проект 11">
+        <img src="https://via.placeholder.com/600x350?text=Проект+12" alt="Проект 12">
+        <img src="https://via.placeholder.com/600x350?text=Проект+13" alt="Проект 13">
+      </div>
+      <button class="slider-btn next">❯</button>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Татьяна · QA Portfolio
+  </footer>
 
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
