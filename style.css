@@ -154,3 +154,28 @@ section h2 {
   font-weight: bold;
   cursor: pointer;
 }
+// Lightbox для увеличения картинок
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.querySelector('.lightbox-img');
+const closeBtn = document.querySelector('.lightbox .close');
+
+// Добавляем клик на каждую картинку слайдера
+images.forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+  });
+});
+
+// Закрытие по кнопке
+closeBtn.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+// Закрытие по клику на фоне
+lightbox.addEventListener('click', e => {
+  if (e.target === lightbox) {
+    lightbox.style.display = 'none';
+  }
+});
