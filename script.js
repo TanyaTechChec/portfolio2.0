@@ -49,10 +49,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const slides = document.querySelectorAll('.slides img');
   const nextBtn = document.querySelector('.next');
   const prevBtn = document.querySelector('.prev');
+  const container = document.querySelector('.slides-container');
   let index = 0;
 
   function showSlide(){
-    slides.forEach((img,i)=>{ img.classList.remove('active'); if(i===index) img.classList.add('active'); });
+    slides.forEach((img,i)=>{
+      img.classList.remove('active');
+      if(i===index) img.classList.add('active');
+    });
+    // подгоняем высоту контейнера под активную картинку
+    const activeImg = slides[index];
+    container.style.height = activeImg.naturalHeight > 400 ? '400px' : activeImg.naturalHeight + 'px';
   }
 
   nextBtn.addEventListener('click',()=>{
