@@ -34,7 +34,7 @@ header, section, footer { background-color: rgba(0,0,0,0.5); border-radius:10px;
 .project-btn:hover, .contact-btn:hover { background:#ffd700; color:#000; transform:translateY(-2px); box-shadow:0 6px 15px rgba(0,0,0,0.3);}
 .project-btn:active, .contact-btn:active { transform:translateY(0); }
 
-/* Слайдер */
+/* slider */
 .slider {
   position: relative;
   max-width: 600px;
