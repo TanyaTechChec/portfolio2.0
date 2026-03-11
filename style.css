@@ -49,11 +49,11 @@ header, section, footer { background-color: rgba(0,0,0,0.5); border-radius:10px;
 }
 
 .slides img {
-  width: 100%;
-  height: 350px;          /* фиксированная высота */
   flex-shrink: 0;
-  object-fit: cover;      /* центр + обрезка */
-  object-position: center;
+  width: 100%;           /* занимает всю ширину слайда */
+  height: auto;          /* сохраняет пропорции картинки */
+  max-height: 350px;     /* ограничиваем максимальную высоту */
+  object-fit: contain;   /* показывает всю картинку без обрезки */
   border-radius: 10px;
 }
 
