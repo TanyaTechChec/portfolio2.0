@@ -1,89 +1,68 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  // Фон пузырей
+  // Пузырьковый фон
   (function() {
-    var width, height, canvas, ctx, circles, target, animateHeader = true;
+    var width, height, canvas, ctx, circles, animateHeader = true;
 
     function initHeader() {
       width = window.innerWidth;
       height = window.innerHeight;
-      target = {x: 0, y: height};
       canvas = document.getElementById('bubbles');
       if (!canvas) return;
-      canvas.width = width;
-      canvas.height = height;
+      canvas.width = width; canvas.height = height;
       ctx = canvas.getContext('2d');
       circles = [];
-      for (var x = 0; x < width * 0.9; x++) {
-        circles.push(new Circle());
-      }
+      for(var x=0;x<width*0.9;x++){circles.push(new Circle());}
       animate();
     }
-
     function addListeners() {
-      window.addEventListener('scroll', scrollCheck);
-      window.addEventListener('resize', resize);
+      window.addEventListener('scroll',()=>{animateHeader=document.body.scrollTop<=height;});
+      window.addEventListener('resize',()=>{width=window.innerWidth;height=window.innerHeight;canvas.width=width;canvas.height=height;});
     }
-
-    function scrollCheck() { animateHeader = document.body.scrollTop <= height; }
-    function resize() { width = window.innerWidth; height = window.innerHeight; canvas.width = width; canvas.height = height; }
-
-    function animate() {
-      if (animateHeader) {
-        ctx.clearRect(0, 0, width, height);
-        for (var i in circles) { circles[i].draw(); }
-      }
+    function animate(){
+      if(animateHeader){ctx.clearRect(0,0,width,height);for(var i in circles){circles[i].draw();}}
       requestAnimationFrame(animate);
     }
-
-    function Circle() {
-      var _this = this;
-      function init() {
-        _this.pos = { x: Math.random() * width, y: height + Math.random() * 100 };
-        _this.alpha = 0.1 + Math.random() * 0.9;
-        _this.scale = 0.1 + Math.random() * 0.9;
-        _this.velocity = Math.random();
-      }
-      init();
-      this.draw = function() {
-        if (_this.alpha <= 0) init();
-        _this.pos.y -= _this.velocity;
-        _this.alpha -= 0.0005;
-        ctx.beginPath();
-        ctx.arc(_this.pos.x, _this.pos.y, _this.scale * 10, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(157,188,225,' + _this.alpha + ')';
-        ctx.fill();
-      }
-    }
-
-    initHeader();
-    addListeners();
+    function Circle(){var _this=this;function init(){_this.pos={x:Math.random()*width,y:height+Math.random()*100};_this.alpha=0.1+Math.random()*0.9;_this.scale=0.1+Math.random()*0.9;_this.velocity=Math.random();}init();
+      this.draw=function(){if(_this.alpha<=0)init();_this.pos.y-=_this.velocity;_this.alpha-=0.0005;ctx.beginPath();ctx.arc(_this.pos.x,_this.pos.y,_this.scale*10,0,Math.PI*2);ctx.fillStyle='rgba(157,188,225,'+_this.alpha+')';ctx.fill();}} 
+    initHeader(); addListeners();
   })();
 
   // Слайдер
-  const slides = document.querySelector('.slides');
-  const images = document.querySelectorAll('.slides img');
-  const nextBtn = document.querySelector('.next');
-  const prevBtn = document.querySelector('.prev');
-  let index = 0;
+  const slides=document.querySelector('.slides');
+  const images=document.querySelectorAll('.slides img');
+  const nextBtn=document.querySelector('.next');
+  const prevBtn=document.querySelector('.prev');
+  let index=0;
 
-  function showSlide() {
-    const slideWidth = images[0].clientWidth;
-    slides.style.transform = `translateX(-${index * slideWidth}px)`;
+  function showSlide(){
+    const w=images[0].clientWidth;
+    slides.style.transform=`translateX(-${index*w}px)`;
   }
 
-  nextBtn.addEventListener('click', () => {
-    index++;
-    if (index >= images.length) index = 0;
-    showSlide();
+  nextBtn.addEventListener('click',()=>{
+    index++; if(index>=images.length) index=0; showSlide();
   });
-
-  prevBtn.addEventListener('click', () => {
-    index--;
-    if (index < 0) index = images.length - 1;
-    showSlide();
+  prevBtn.addEventListener('click',()=>{
+    index--; if(index<0) index=images.length-1; showSlide();
   });
-
   window.addEventListener('resize', showSlide);
   showSlide();
+
+  // Lightbox
+  const lightbox=document.getElementById('lightbox');
+  const lightboxImg=lightbox.querySelector('img');
+  const closeBtn=lightbox.querySelector('.close');
+
+  images.forEach(img=>{
+    img.addEventListener('click', ()=>{
+      lightbox.style.display='flex';
+      lightboxImg.src=img.src;
+      lightboxImg.alt=img.alt;
+    });
+  });
+
+  closeBtn.addEventListener('click', ()=>{lightbox.style.display='none';});
+  lightbox.addEventListener('click', e=>{if(e.target===lightbox) lightbox.style.display='none';});
+
 });
