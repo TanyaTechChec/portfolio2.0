@@ -64,7 +64,7 @@ color:#ffd700;
 margin-bottom:12px;
 }
 
-/* ===== ТЕХНОЛОГИИ (НЕ кнопки) ===== */
+/*  ТЕХНОЛОГИИ (НЕ кнопки)  */
 
 .skills-list{
 display:flex;
@@ -84,7 +84,7 @@ cursor:default;
 }
 
 
-/* ===== КНОПКИ КОНТАКТОВ ===== */
+/*  КНОПКИ КОНТАКТОВ  */
 
 .contact-buttons a{
 display:inline-block;
@@ -105,7 +105,7 @@ transform:translateY(-2px);
 }
 
 
-/* ===== КНОПКИ ПРОЕКТОВ ===== */
+/* КНОПКИ ПРОЕКТОВ */
 
 .projects-buttons a{
 display:inline-block;
