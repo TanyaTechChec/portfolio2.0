@@ -64,10 +64,28 @@ color:#ffd700;
 margin-bottom:12px;
 }
 
-/* ===== Универсальные плашки (skills / проекты / контакты) ===== */
+/* ===== ТЕХНОЛОГИИ (НЕ кнопки) ===== */
 
-.skills-list span,
-.projects-buttons a,
+.skills-list{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-top:10px;
+}
+
+.skills-list span{
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.15);
+padding:4px 10px;
+border-radius:6px;
+font-size:0.85rem;
+color:#e6e6e6;
+cursor:default;
+}
+
+
+/* ===== КНОПКИ КОНТАКТОВ ===== */
+
 .contact-buttons a{
 display:inline-block;
 background:rgba(255,255,255,0.15);
@@ -78,6 +96,33 @@ font-size:0.9rem;
 color:white;
 text-decoration:none;
 transition:all .25s ease;
+}
+
+.contact-buttons a:hover{
+background:#ffd700;
+color:black;
+transform:translateY(-2px);
+}
+
+
+/* ===== КНОПКИ ПРОЕКТОВ ===== */
+
+.projects-buttons a{
+display:inline-block;
+background:rgba(255,255,255,0.15);
+padding:6px 14px;
+margin:4px;
+border-radius:8px;
+font-size:0.9rem;
+color:white;
+text-decoration:none;
+transition:all .25s ease;
+}
+
+.projects-buttons a:hover{
+background:#ffd700;
+color:black;
+transform:translateY(-2px);
 }
 
 /* hover */
