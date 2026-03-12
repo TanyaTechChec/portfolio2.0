@@ -127,7 +127,6 @@ transform:translateY(-2px);
 
 /* hover */
 
-.skills-list span:hover,
 .projects-buttons a:hover,
 .contact-buttons a:hover{
 background:#ffd700;
