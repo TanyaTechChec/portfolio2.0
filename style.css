@@ -230,9 +230,9 @@ color:white;
 cursor:pointer;
 }
 
-/* отдельный блок сертификата под "О себе" */
+/* отдельный блок сертификата под о себе */
 .about-cert {
-  margin-top: 15px;       /* отступ сверху */
-  display: flex;           /* чтобы кнопка красиво располагалась */
-  justify-content: flex-start; /* выравнивание по левому краю */
+  margin-top: 15px;
+  display: flex; /* чтобы кнопка располагалась красиво */
+  justify-content: flex-start;
 }
